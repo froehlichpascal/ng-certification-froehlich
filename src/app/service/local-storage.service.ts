@@ -8,8 +8,7 @@ export class LocalStorageService {
 
     private static readonly STORAGE_KEY_ZIP_CODES = "ZIP_CODES";
 
-    constructor() {
-    }
+    constructor() {}
 
     saveZip(zip: number): number[] {
         let zips = this.loadZips();
