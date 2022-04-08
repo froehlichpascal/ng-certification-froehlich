@@ -1,6 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {WeatherService} from "../../service/weather.service";
-import {Weatherlocation} from "../../dto/weatherlocation.module";
+import {Weatherlocation} from "../../dto/weatherlocation";
 
 @Component({
     selector: 'app-weather-location',

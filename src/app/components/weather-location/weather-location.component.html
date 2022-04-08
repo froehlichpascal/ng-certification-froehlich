@@ -1,12 +1,12 @@
-<div class="well flex" *ngIf="weatherLocation.name; else noWeatherFound">
+<div class="well flex" *ngIf="weatherLocation; else noWeatherFound">
   <div>
     <h3>{{ weatherLocation.name }} ({{ zip }})</h3>
-    <h4>Current conditions: Clouds</h4>
+    <h4>Current conditions: {{weatherLocation.weather[0].main}}</h4>
     <h4>Temperatures today:</h4>
     <p>
-      Current {{ weatherLocation.temperature }} - Max
-      {{ weatherLocation.maxTemperature }} - Min
-      {{ weatherLocation.maxTemperature }}
+      Current {{ weatherLocation.main.temp }}°C - Max
+      {{ weatherLocation.main.temp_max }}°C - Min
+      {{ weatherLocation.main.temp_min }}°C
     </p>
     <p>
       <a href="/forecast/{{ zip }}"
@@ -20,5 +20,8 @@
   </div>
 </div>
 <ng-template #noWeatherFound>
-  <div class="well flex">Nothing found.</div>
+  <div class="well flex">
+    Nothing found for Zipcode: {{zip}}
+    <span (click)="removeZip()" class="close">×</span>
+  </div>
 </ng-template>
