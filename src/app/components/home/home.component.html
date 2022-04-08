@@ -1,0 +1,6 @@
+<div class="container-fluid">
+    <app-zip-form (zipAdded)="addZip($event)"></app-zip-form>
+    <div *ngFor="let zip of zips; index as i">
+        <app-weather-location [zip]="zip" [index]="i" (removeZipAtIndex)="removeZip($event)" ></app-weather-location>
+    </div>
+</div>

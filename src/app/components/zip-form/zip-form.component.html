@@ -1,0 +1,13 @@
+<div class="well">
+    <h2>Enter a zipcode:</h2>
+    <form [formGroup]="zipForm">
+    <input formControlName="newZip" class="form-control" placeholder="Zipcode" type="text" id="addLocation">
+        <div style="color:red" *ngIf="zipForm.dirty && zipForm.invalid">
+            Please input a valid zip-Code.
+        </div>
+    <br>
+    <button (click)="addZip()" class="btn btn-primary" id="addLocationBtn">
+        Add location
+    </button>
+    </form>
+</div>
