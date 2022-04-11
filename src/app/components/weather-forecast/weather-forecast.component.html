@@ -10,10 +10,10 @@
             <li class="list-group-item" *ngFor="let fDay of forecast.list">
                 <div class="row">
                     <div class="col-10">
-                            {{fDay.dt | date:'EEEE, MMM d'}}
+                            {{fDay.dt * 1000 | date:'EEEE, MMM d'}}
                         {{fDay.weather[0].main}}
-                        - Min: {{fDay.temp.min}}
-                        - Max: {{fDay.temp.max}}
+                        - Min: {{fDay.temp.min}}°C
+                        - Max: {{fDay.temp.max}}°C
                     </div>
                     <div class="col-2">
                         <app-weather-image [iconKey]="fDay.weather[0].icon" [customClass]="'icon'"
