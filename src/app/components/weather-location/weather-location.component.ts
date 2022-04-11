@@ -21,7 +21,6 @@ export class WeatherLocationComponent implements OnInit {
     ngOnInit(): void {
         console.log(this.weatherLocation);
         this.weatherService.getWeatherCurrent(this.zip).subscribe(weatherLocation => {
-            console.log(weatherLocation);
             this.weatherLocation = weatherLocation;
         });
         console.log(this.weatherLocation);
