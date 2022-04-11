@@ -23,7 +23,6 @@ export class WeatherLocationComponent implements OnInit {
         this.weatherService.getWeatherCurrent(this.zip).subscribe(weatherLocation => {
             this.weatherLocation = weatherLocation;
         });
-        console.log(this.weatherLocation);
     }
 
     public removeZip() {

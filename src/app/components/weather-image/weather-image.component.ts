@@ -22,7 +22,6 @@ export class WeatherImageComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        console.log(this.iconKey);
         this.iconName = this.getIconName(this.iconKey);
     }
 
