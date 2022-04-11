@@ -19,7 +19,7 @@ export class WeatherForecastComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {
-      this.zip = params['zip'];
+      this.zip = params['zipcode'];
     });
 
     this.weatherService.getWeatherForecast(this.zip).subscribe(data => {

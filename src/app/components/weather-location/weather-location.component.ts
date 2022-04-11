@@ -1,6 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {WeatherService} from "../../service/weather.service";
-import {Weatherlocation} from "../../dto/weatherlocation";
+import {WeatherLocation} from "../../dto/weatherlocation";
 
 @Component({
     selector: 'app-weather-location',
@@ -13,7 +13,7 @@ export class WeatherLocationComponent implements OnInit {
     @Input() public index: number;
     @Output() public removeZipAtIndex = new EventEmitter<number>();
 
-    weatherLocation?: Weatherlocation;
+    weatherLocation?: WeatherLocation;
 
     constructor(private weatherService: WeatherService) {
     }

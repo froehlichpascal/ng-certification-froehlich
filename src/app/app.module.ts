@@ -9,10 +9,9 @@ import {HomeComponent} from './components/home/home.component';
 import {AppRoutingModule} from "./app-routing.module";
 import {WeatherLocationComponent} from './components/weather-location/weather-location.component';
 import {WeatherForecastComponent} from './components/weather-forecast/weather-forecast.component';
-import {HttpClient, HttpClientModule} from "@angular/common/http";
 import {WeatherImageComponent} from './components/weather-image/weather-image.component';
-import {WeatherService} from "./service/weather.service";
 import {APP_BASE_HREF} from "@angular/common";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
     imports: [

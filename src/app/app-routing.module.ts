@@ -4,7 +4,7 @@ import {HomeComponent} from "./components/home/home.component";
 import {WeatherForecastComponent} from "./components/weather-forecast/weather-forecast.component";
 
 const routes: Routes = [
-    {path: 'forecast/:zip', component: WeatherForecastComponent},
+    {path: 'forecast/:zipcode', component: WeatherForecastComponent},
     {path: '', component: HomeComponent}
 ]
 

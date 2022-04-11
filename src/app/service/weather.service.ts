@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {Weatherlocation} from "../dto/weatherlocation";
+import {WeatherLocation} from "../dto/weatherlocation";
 import {Observable} from "rxjs";
 import {WeatherForecast} from "../dto/weatherforecast";
 
@@ -17,8 +17,8 @@ export class WeatherService {
     constructor(private http: HttpClient) {
     }
 
-    public getWeatherCurrent(zip: number): Observable<Weatherlocation> {
-        return this.http.get<Weatherlocation>(
+    public getWeatherCurrent(zip: number): Observable<WeatherLocation> {
+        return this.http.get<WeatherLocation>(
             WeatherService.BASE_URL + "weather?"
             + "zip=" + zip
             + "&units=" + WeatherService.UNITS

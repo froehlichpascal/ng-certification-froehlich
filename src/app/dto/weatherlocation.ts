@@ -1,4 +1,4 @@
-export interface Weatherlocation {
+export interface WeatherLocation {
   name: string,
   main: {
     temp: number;

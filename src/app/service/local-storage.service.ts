@@ -37,7 +37,7 @@ export class LocalStorageService {
         JSON.stringify(savedZips)
       );
     } catch (e) {
-      console.error('Error saving' + savedZips + 'to local Stroage', e);
+      console.error('Error saving' + savedZips + 'to local Storage', e);
     }
   }
 
